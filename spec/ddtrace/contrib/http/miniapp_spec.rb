@@ -53,7 +53,7 @@ RSpec.describe 'net/http miniapp tests' do
         expect(parent_span.name).to eq('page')
         expect(parent_span.service).to eq('webapp')
         expect(parent_span.resource).to eq('/index')
-        expect(parent_span.span_id).to_not eq(parent_span.trace_id)
+        expect(parent_span.span_id).to eq(parent_span.trace_id)
         expect(parent_span.parent_id).to eq(0)
 
         # HTTP Spans
